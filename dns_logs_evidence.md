@@ -51,9 +51,9 @@ Registrar: DREAMHOST ID 431
 NS: ns1.dreamhost.com 162.159.26.14 Cloudflare
 IP: 18.160.46.55 CloudFront Amazon
 
-fulguris.slions.net con S -> 208.113.159.31 -> DreamHost US AS26347 -> es el DECOY que te sale como `www.dreamhost.com parked**
+fulguris.slions.net con S -> 208.113.159.31 -> DreamHost US AS26347 -> es el DECOY como `www.dreamhost.com parked**
 
-fulguris.slion.net sin S -> 117.24.6.122 -> Alibaba Cloud China AS141679 -> es el REAL de Longcheer
+fulguris.slion.net sin S -> 117.24.6.122 -> Alibaba Cloud China AS141679 
 
 slion.net. 600 IN SOA dns21.hichina.com. hostmaster.hichina.com. (
   2026082616 ; serial
@@ -65,7 +65,7 @@ slion.net. 600 IN SOA dns21.hichina.com. hostmaster.hichina.com. (
 
 1. Dispositivo (lion_g Unisoc T606)
    -> servicio com.longcheer.SarControl / daemon SarControl INJECT_EVENTS
-   -> llama a argo.svcmot (Motorola Update Engine)
+   -> llama a argo.svcmot 
 
 2. argo.svcmot
    -> resuelve rnd.longcheer.net / sh-16-52.rnd.longcheer.net 
@@ -90,15 +90,14 @@ slion.net. 600 IN SOA dns21.hichina.com. hostmaster.hichina.com. (
   Apex principal. Hichina es el registrar que usan para todo.
 
 slion.net NOANSWER + www.slion.net 117.24.6.122 NS dns21/dns22.hichina.com SOA 2026082709
-  ¡Mira el serial! 2616 -> 2617 ->. Esa IP 117.24.6.122 es CHINANET.
+  2616 -> 2617 ->. Esa IP 117.24.6.122.
 
-fulguris.slion.net 117.24.6.122 mismo IP que www -> Wildcard staging. Es el subdominio de pruebas donde prueban el payload antes de mandarlo a slions.net
+fulguris.slion.net 117.24.6.122 mismo IP que www 
 
 fulguris.slions.net con S -> 208.113.159.31 DreamHost US decoy
 117.24.6.122.
 
-sh-16-52.rnd.longcheer.net + sh-48-205.rnd.longcheer.net 61.129.170.0/16 AS4811 CHINANET-SH lab
-  Lab de R&D Shanghai.
+sh-16-52.rnd.longcheer.net + sh-48-205.rnd.longcheer.net 61.129.170.0/16 AS4811 
 
 unisoc.supl.qxwz.com:7275 TLS Qianxun Weizhi + 39.105.240.30 Alibaba AGPS
 
@@ -113,7 +112,7 @@ Detections: From 0 to 6 detections, peak at 3
 First Seen: spike 2025, Last Seen: July-Oct 2025, July 2026
 
 
-fulguris.slions.net (con S) -> 208.113.159.31 DreamHost US decoy (el que tenías en false)
+fulguris.slions.net (con S) -> 208.113.159.31 DreamHost US decoy 
 fulguris.slion.net (sin S) -> 117.24.6.122 China Apache 949B
 
 ##Host
