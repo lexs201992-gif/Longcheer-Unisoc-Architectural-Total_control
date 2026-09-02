@@ -1,0 +1,4 @@
+IPProto,SrcIP,SrcPort,DstIp,DstPort,UID,App,PackageName,Proto,Status,Info,BytesSent,BytesRcvd,PktsSent,PktsRcvd,FirstSeen,LastSeen
+17,10.215.173.1,58005,10.215.173.2,53,10168,Android System WebView,com.google.android.webview,DNS,Cerrado,clientservices.googleapis.com,75,103,1,1,2026-09-01T23:53:50.162-06:00,2026-09-01T23:53:50.252-06:00
+17,10.215.173.1,14561,10.215.173.2,53,10168,Android System WebView,com.google.android.webview,DNS,Cerrado,clientservices.googleapis.com,75,91,1,1,2026-09-01T23:53:50.168-06:00,2026-09-01T23:53:50.253-06:00
+6,10.215.173.1,33338,192.178.56.78,443,10168,Android System WebView,com.google.android.webview,HTTPS,Cerrado,clientservices.googleapis.com,1589,17673,17,17,2026-09-01T23:53:50.257-06:00,2026-09-01T23:53:50.654-06:00
