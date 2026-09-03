@@ -1,0 +1,10 @@
+IPProto,SrcIP,SrcPort,DstIp,DstPort,UID,App,PackageName,Proto,Status,Info,BytesSent,BytesRcvd,PktsSent,PktsRcvd,FirstSeen,LastSeen
+6,fd00:2:fd00:1:fd00:1:fd00:1,41520,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:31.963-06:00,2026-09-03T02:08:31.965-06:00
+6,fd00:2:fd00:1:fd00:1:fd00:1,41534,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:31.987-06:00,2026-09-03T02:08:31.989-06:00
+6,fd00:2:fd00:1:fd00:1:fd00:1,41538,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:31.990-06:00,2026-09-03T02:08:31.991-06:00
+6,fd00:2:fd00:1:fd00:1:fd00:1,41604,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:31.999-06:00,2026-09-03T02:08:32.001-06:00
+6,fd00:2:fd00:1:fd00:1:fd00:1,41606,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:32.002-06:00,2026-09-03T02:08:32.003-06:00
+6,fd00:2:fd00:1:fd00:1:fd00:1,41612,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:32.005-06:00,2026-09-03T02:08:32.007-06:00
+6,fd00:2:fd00:1:fd00:1:fd00:1,41620,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:32.008-06:00,2026-09-03T02:08:32.010-06:00
+6,fd00:2:fd00:1:fd00:1:fd00:1,41644,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:32.033-06:00,2026-09-03T02:08:32.034-06:00
+6,fd00:2:fd00:1:fd00:1:fd00:1,41652,2620:fe::9,443,-1,Desconocido,unknown,TLS,Inalcanzable,dns.quad9.net,80,60,1,1,2026-09-03T02:08:32.036-06:00,2026-09-03T02:08:32.037-06:00
