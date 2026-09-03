@@ -1,0 +1,4 @@
+IPProto,SrcIP,SrcPort,DstIp,DstPort,UID,App,PackageName,Proto,Status,Info,BytesSent,BytesRcvd,PktsSent,PktsRcvd,FirstSeen,LastSeen
+17,10.215.173.1,44151,10.215.173.2,53,1000,Android,android,DNS,Cerrado,2.android.pool.ntp.org,68,180,1,1,2026-09-03T02:17:32.477-06:00,2026-09-03T02:17:32.525-06:00
+17,10.215.173.1,42543,10.215.173.2,53,1000,Android,android,DNS,Cerrado,2.android.pool.ntp.org,68,132,1,1,2026-09-03T02:17:32.480-06:00,2026-09-03T02:17:32.527-06:00
+17,10.215.173.1,41817,45.231.168.6,123,1000,Android,android,NTP,Cerrado,2.android.pool.ntp.org,76,76,1,1,2026-09-03T02:17:32.535-06:00,2026-09-03T02:17:32.623-06:00
