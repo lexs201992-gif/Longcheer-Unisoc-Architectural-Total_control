@@ -1,0 +1,82 @@
+power profile qogirl overlays 
+<?xml version="1.0" encoding="utf-8"?>
+<device name="Android">
+	<item name="screen.on" />
+	<item name="screen.full" />
+	<item name="audio" />
+	<item name="video" />
+	<item name="camera.flashlight" />
+	<item name="camera.avg" />
+	<item name="radio.active" />
+	<item name="radio.scanning" />
+	<item name="bluetooth.controller.idle" />
+	<item name="bluetooth.controller.rx" />
+	<item name="bluetooth.controller.tx" />
+	<item name="bluetooth.controller.voltage" />
+	<array name="cpu.clusters.cores">
+		<value />
+		<value />
+	</array>
+	<array name="cpu.core_speeds.cluster0">
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+	</array>
+	<array name="cpu.core_speeds.cluster1">
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+	</array>
+	<array name="cpu.core_power.cluster0">
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+	</array>
+	<array name="cpu.core_power.cluster1">
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+	</array>
+	<item name="cpu.suspend" />
+	<item name="cpu.idle" />
+	<item name="cpu.active" />
+	<item name="cpu.cluster_power.cluster0" />
+	<item name="cpu.cluster_power.cluster1" />
+	<item name="battery.capacity" />
+	<item name="wifi.controller.idle" />
+	<item name="wifi.controller.rx" />
+	<item name="wifi.controller.tx" />
+	<item name="wifi.controller.voltage" />
+	<item name="modem.controller.sleep" />
+	<item name="modem.controller.idle" />
+	<item name="modem.controller.rx" />
+	<array name="modem.controller.tx">
+		<value />
+		<value />
+		<value />
+		<value />
+		<value />
+	</array>
+	<item name="modem.controller.voltage" />
+	<array name="gps.signalqualitybased">
+		<value />
+		<value />
+	</array>
+	<item name="gps.voltage" />
+</device>
