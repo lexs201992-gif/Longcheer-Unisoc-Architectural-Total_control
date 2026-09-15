@@ -1,0 +1,35 @@
+# ==============================================================================
+# PROJECT-LION: ORB Architecture Specific Detection (v2.1 - Hydra)
+# Author: Alexis Michel De La Cruz Correa (lexs201992-gif)
+# Date: 2026-09-15 | Release: 2.0 THE RISE OF THE HYDRA
+# Reference: github.com/lexs201992-gif/Longcheer-Unisoc-Architectural-Total_control
+# Severity: CRITICAL
+# Lab: MCC334 MNC020 Telcel MX - Validated with NextDNS DoT logs
+# ==============================================================================
+
+# --- C2: Fulguris (WireGuard, Fuzhou, AS133774) ---
+alert udp $HOME_NET any -> 117.24.6.122 51820 (msg:"PROJECT-LION WireGuard C2 to Fulguris Fuzhou AS133774"; flow:to_server; dsize:>100; classtype:trojan-activity; sid:1000011; rev:2;)
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION Fulguris C2 Domain Resolution"; dns.query; content:"fulguris.slion"; nocase; classtype:trojan-activity; sid:1000012; rev:2;)
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION Slion C2 Wrapper Resolution"; dns.query; content:"slions.net"; nocase; classtype:trojan-activity; sid:1000013; rev:2;)
+
+# --- OSS Exfiltration (Alibaba Cloud EU) ---
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION Alibaba OSS Exfil Endpoint"; dns.query; content:"ossplanet.net"; nocase; classtype:trojan-activity; sid:1000014; rev:2;)
+alert tls $HOME_NET any -> any 443 (msg:"PROJECT-LION OSS Exfil SNI"; tls.sni; content:"ossplanet.net"; nocase; classtype:trojan-activity; sid:1000015; rev:2;)
+
+# --- COTA Trigger (Carrier Activation) ---
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION COTA SDK Trigger Telcel MCC334"; dns.query; content:"cota-sdk2.mnc020.mcc334"; nocase; classtype:trojan-activity; sid:1000016; rev:2;)
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION COTA 3GPP Network Generic"; dns.query; content:".pub.3gppnetwork.org"; nocase; classtype:policy-violation; sid:1000017; rev:2;)
+
+# --- Monetization / Blood ---
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION InMobi Ad-Fraud Funding"; dns.query; content:"inmobi.com"; nocase; classtype:trojan-activity; sid:1000018; rev:2;)
+
+# --- Build Host (Longcheer Jenkins) ---
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION Longcheer Build Host Jenkins"; dns.query; content:".rnd.longcheer.net"; nocase; classtype:trojan-activity; sid:1000019; rev:2;)
+
+# --- AS4812 / Qianxun GNSS Cover ---
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION AS4812 DNS China Telecom"; dns.query; content:"online.sh.cn"; nocase; classtype:trojan-activity; sid:1000020; rev:2;)
+alert dns $HOME_NET any -> any any (msg:"PROJECT-LION Qianxun GNSS Cover qxwz.com"; dns.query; content:"qxwz.com"; nocase; classtype:trojan-activity; sid:1000021; rev:2;)
+alert tcp $HOME_NET any -> 39.105.240.30 7275 (msg:"PROJECT-LION Qianxun SUPL TLS 7275"; flow:to_server; classtype:trojan-activity; sid:1000022; rev:2;)
+
+# --- Decoy / Fallback ---
+alert udp $HOME_NET any -> 208.113.159.31 51820 (msg:"PROJECT-LION Fulguris Decoy US Fallback"; flow:to_server; classtype:trojan-activity; sid:1000023; rev:2;)
