@@ -1,0 +1,38 @@
+name: PROJECT_LION_SELINUX_CORRUPTION
+description: >
+  Detects SELinux policy corruption on Unisoc T606 devices
+  where the policy is modified in RAM (MIPI HD injection)
+  but the mode remains "enforcing"
+author: Alexis Michel De La Cruz Correa
+date: 2026-09-16
+severity: CRITICAL
+
+queries:
+  - query: |
+      SELECT
+        client_id,
+        os_info,
+        label,
+        -- Check mode (should be "Enforcing")
+        SELECT string FROM glob(globs='/sys/fs/selinux/enforce') AS mode,
+        -- Check policy hash
+        SELECT hash FROM glob(globs='/sys/fs/selinux/policy') AS policy_hash,
+        -- Check for am_local_server in policy (should NOT exist)
+        SELECT string FROM glob(globs='/sys/fs/selinux/policy')
+          WHERE string CONTAINS 'am_local' AS ghost_in_policy,
+        -- Check for missing contexts
+        SELECT string FROM glob(globs='/sys/fs/selinux/context')
+          WHERE string CONTAINS 'am_local' AS ghost_context
+      FROM info()
+    artifacts:
+      - PROJECT_LION_SELINUX_BASELINE  # expected hash for T606
+
+  - query: |
+      -- If policy hash != baseline hash → CORRUPTED
+      SELECT
+        client_id,
+        'SELINUX_CORRUPTED' AS finding,
+        policy_hash,
+        baseline_hash
+      FROM previous()
+      WHERE policy_hash != baseline_hash   
