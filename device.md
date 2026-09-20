@@ -4,7 +4,6 @@ Model: moto g04s
 Brand: motorola  
 
 Android Informations  
-Android ID: 4cd9d9666f6f4f49  
 Android Release: 14  
 Version Name: Android 14 REL  
 API Level: 34  
